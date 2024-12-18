@@ -1,0 +1,159 @@
+/* Reset básico para garantir consistência */
+* {
+    margin: 0;               /* Remove a margem padrão de todos os elementos */
+    padding: 0;              /* Remove o preenchimento padrão de todos os elementos */
+    box-sizing: border-box;  /* Faz com que a largura e altura de um elemento incluam o padding e a borda */
+}
+
+/* Corpo da página */
+body {
+    font-family: 'Arial', sans-serif;  /* Define a fonte padrão da página como Arial ou qualquer fonte sans-serif */
+    line-height: 1.6;                  /* Define o espaçamento entre as linhas do texto */
+    background-color: #818181;         /* Define a cor de fundo da página como um cinza claro */
+    color: #333;                       /* Define a cor do texto como cinza escuro */
+}
+
+/* Cabeçalho e Navegação */
+header {
+    background-color: #333;  /* Define a cor de fundo do cabeçalho como cinza escuro */
+    padding: 20px;            /* Adiciona 20px de espaçamento interno (padding) ao redor do conteúdo do cabeçalho */
+    color: #fff;              /* Define a cor do texto dentro do cabeçalho como branco */
+}
+
+header nav ul {
+    list-style: none;               /* Remove os marcadores de lista (bolinhas) */
+    display: flex;                   /* Exibe os itens de navegação em linha (horizontal) */
+    justify-content: center;         /* Centraliza os itens dentro da navegação */
+}
+
+header nav ul li {
+    margin: 0 15px;  /* Define 15px de espaçamento entre cada item de lista (itens de navegação) */
+}
+
+header nav ul li a {
+    color: #fff;               /* Define a cor dos links como branco */
+    text-decoration: none;      /* Remove o sublinhado dos links */
+    font-weight: bold;          /* Deixa os links em negrito */
+    transition: color 0.3s ease; /* Adiciona uma transição suave na cor dos links ao passar o mouse */
+}
+
+header nav ul li a:hover {
+    color: #4CAF50;  /* Muda a cor do link para verde quando o mouse passa por cima (efeito hover) */
+}
+
+/* Seção Sobre Mim */
+#sobre {
+    padding: 40px 20px;            /* Adiciona 40px de espaçamento nas laterais e 20px no topo e fundo da seção */
+    background-color: #fff;        /* Define a cor de fundo da seção sobre como branca */
+    margin-top: 20px;               /* Adiciona uma margem superior de 20px para separar do conteúdo anterior */
+    text-align: center;            /* Centraliza o conteúdo da seção */
+}
+
+#sobre h1 {
+    font-size: 2.5rem;  /* Define o tamanho do título da seção como 2.5rem */
+    color: #333;        /* Define a cor do título como cinza escuro */
+    margin-bottom: 20px; /* Adiciona uma margem inferior de 20px para separar o título do restante do conteúdo */
+}
+
+#sobre p {
+    font-size: 1.1rem;    /* Define o tamanho da fonte dos parágrafos como 1.1rem */
+    margin-bottom: 15px;  /* Adiciona uma margem inferior de 15px para separar os parágrafos */
+}
+
+#sobre img {
+    position: absolute;     /* Posiciona a imagem de forma absoluta dentro do elemento pai (seção sobre) */
+    top: 20px;              /* Define o deslocamento de 20px a partir do topo do elemento pai */
+    right: 20px;            /* Define o deslocamento de 20px a partir da direita do elemento pai */
+    width: 150px;           /* Define a largura da imagem como 150px */
+    height: 150px;          /* Define a altura da imagem como 150px */
+    border-radius: 50%;     /* Torna a imagem redonda (circular) */
+    margin-bottom: 20px;    /* Adiciona uma margem inferior de 20px abaixo da imagem */
+    z-index: 10;            /* Garante que a imagem fique acima de outros elementos (por conta da posição absoluta) */
+}
+
+/* Caixa de Informações (Nome, Habilidades, Interesse) */
+.caixa {
+    background-color: #fff;  /* Define o fundo da caixa como branco */
+    border: 2px solid #ddd;  /* Define uma borda de 2px e cor cinza claro */
+    padding: 20px;           /* Adiciona 20px de espaçamento interno (padding) ao redor do conteúdo da caixa */
+    margin-bottom: 20px;     /* Adiciona uma margem inferior de 20px para separar as caixas */
+    border-radius: 8px;      /* Arredonda os cantos da caixa */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra suave ao redor da caixa */
+}
+
+.caixa h2 {
+    font-size: 1.5rem;        /* Define o tamanho do título dentro da caixa como 1.5rem */
+    margin-bottom: 10px;      /* Adiciona uma margem inferior de 10px abaixo do título */
+    color: #333;              /* Define a cor do título como cinza escuro */
+}
+
+/* Seção Projetos */
+#projetos {
+    padding: 40px 20px;            /* Adiciona 40px de espaçamento nas laterais e 20px no topo e fundo da seção */
+    background-color: #f9f9f9;     /* Define a cor de fundo da seção de projetos como um cinza claro */
+    margin-top: 20px;               /* Adiciona uma margem superior de 20px para separar a seção de projetos da anterior */
+}
+
+#projetos h2 {
+    font-size: 2rem;    /* Define o tamanho do título da seção de projetos como 2rem */
+    text-align: center; /* Centraliza o texto */
+    color: #333;        /* Define a cor do título como cinza escuro */
+    margin-bottom: 20px; /* Adiciona uma margem inferior de 20px */
+}
+
+.projetos {
+    display: grid;                       /* Exibe os itens de projetos em um grid */
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Define o layout para ser responsivo, ajustando as colunas conforme o tamanho da tela */
+    gap: 20px; /* Define o espaço de 20px entre os itens do grid */
+}
+
+.projeto-item {
+    background-color: #fff;      /* Define o fundo do item do projeto como branco */
+    padding: 20px;               /* Adiciona 20px de espaçamento interno (padding) dentro do item */
+    border-radius: 8px;          /* Arredonda os cantos do item */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra sutil ao redor do item */
+    transition: transform 0.3s ease;         /* Adiciona uma transição suave ao transformar o item */
+}
+
+.projeto-item:hover {
+    transform: translateY(-5px);  /* Move o item para cima quando o mouse passa sobre ele */
+}
+
+.projeto-item a {
+    text-decoration: none;  /* Remove o sublinhado do link */
+    color: inherit;         /* Herda a cor do texto do item */
+}
+
+.projeto-item h3 {
+    font-size: 1.5rem;    /* Define o tamanho do título dentro do item como 1.5rem */
+    color: #333;          /* Define a cor do título como cinza escuro */
+    margin-bottom: 10px;   /* Adiciona uma margem inferior de 10px abaixo do título */
+}
+
+.projeto-item p {
+    font-size: 1rem;      /* Define o tamanho da fonte do parágrafo dentro do item como 1rem */
+    color: #666;          /* Define a cor do texto como cinza claro */
+}
+
+/* Seção Redes Sociais */
+#redes-sociais {
+    padding: 20px;             /* Adiciona 20px de espaçamento interno (padding) */
+    background-color: #333;    /* Define o fundo da seção de redes sociais como cinza escuro */
+    text-align: center;        /* Centraliza o conteúdo dentro da seção */
+    margin-top: 40px;          /* Adiciona uma margem superior de 40px */
+}
+
+#redes-sociais h2 {
+    font-size: 2rem;       /* Define o tamanho do título das redes sociais como 2rem */
+    color: #fff;           /* Define a cor do título como branco */
+    margin-bottom: 20px;   /* Adiciona uma margem inferior de 20px abaixo do título */
+}
+
+.redes {
+    display: flex;           /* Exibe os itens de redes sociais em linha (horizontal) */
+    justify-content: center; /* Centraliza os itens */
+    gap: 20px;               /* Adiciona um espaço de 20px entre os ícones */
+}
+
+.redes a {
+    display: inline-block;      /*
